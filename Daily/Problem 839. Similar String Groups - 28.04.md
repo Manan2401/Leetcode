@@ -5,6 +5,7 @@ The problem can be reduced to finding connected components in an undirected grap
 
 To check if two strings are similar, we can simply compare them character by character and count the number of differences. If the number of differences is greater than 2, then we can say that the two strings are not similar. Otherwise, we can say that they are similar and can be merged into the same set.
 
+<br></br>
 ## Python Code:
 ```shell
 class UnionFind:
