@@ -6,6 +6,12 @@ The problem can be reduced to finding connected components in an undirected grap
 To check if two strings are similar, we can simply compare them character by character and count the number of differences. If the number of differences is greater than 2, then we can say that the two strings are not similar. Otherwise, we can say that they are similar and can be merged into the same set.
 
 <br></br>
+## Approach:
+The problem asks us to group strings that are similar. Two strings are considered similar if they can be transformed into each other by swapping at most two letters. To solve this problem, we can use the union-find algorithm. We can first iterate over all pairs of strings in the input array and check if they are similar or not. If they are similar, we union their corresponding sets in the union-find data structure. Finally, we return the number of disjoint sets in the union-find data structure.
+
+To check if two strings are similar, we can iterate over both strings and check if the number of differences between the characters in the two strings is less than or equal to 2.
+
+<br></br>
 ## Python Code:
 ```shell
 class UnionFind:
