@@ -14,7 +14,27 @@
  - The winner will go to the end of the queue for the next round.
  - We keep doing this until one queue is empty which means there are no more senators on the team.
 
+<br></br>
 ## Python code:
 ```shell
+class Solution:
+    def predictPartyVictory(self, senate: str) -> str:
+        rad = []
+        dire = []
+        for i in range(len(senate)):
+            if senate[i]=='R':
+                rad.append(i)
+            else:
+                dire.append(i)
+        n = len(senate)
+        while rad and dire:
+            if rad[0]<dire[0]:
+                rad.append(n)
+            else:
+                dire.append(n)
+            rad.pop(0)
+            dire.pop(0)
+            n+=1
+        return "Radiant" if rad else "Dire"
 
 ```
