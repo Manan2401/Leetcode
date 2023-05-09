@@ -27,6 +27,11 @@ def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
   traverse([0,0],3)
   return answer
 ```
+## Complexity:
+### Time:
+O(M*N)
+### Space:
+O(M*N)
 <br></br>
 
 ## Optimal Approach:
@@ -68,3 +73,8 @@ class Solution:
 def spiralOrder(self, matrix):
     return matrix and [*matrix.pop(0)] + self.spiralOrder([*zip(*matrix)][::-1])
 ```
+## Complexity:
+### Time:
+O(M*N)
+### Space:
+O(1)
