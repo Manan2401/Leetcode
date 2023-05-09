@@ -62,3 +62,9 @@ class Solution:
                 left += 1
         return result
 ```
+<br></br>
+## Python 1-line code:
+```shell
+def spiralOrder(self, matrix):
+    return matrix and [*matrix.pop(0)] + self.spiralOrder([*zip(*matrix)][::-1])
+```
