@@ -1,5 +1,13 @@
 # 59. Spiral Matrix II
+## Approach:
+ - Initialize an empty matrix of size n x n with all elements set to zero.
+ - Define variables left, right, top, bottom, and num.
+ - Use a while loop to iterate over the matrix in a spiral order.
+ - In each iteration, fill in the top row, right column, bottom row, and left column of the remaining submatrix, in that order.
+ - Increment/decrement the values of left, right, top, and bottom accordingly after each iteration, and update the value of num to be filled in the next iteration.
+ - Return the generated matrix.
 
+<br></br>
 ## Python Code:
 ```shell
 class Solution:
