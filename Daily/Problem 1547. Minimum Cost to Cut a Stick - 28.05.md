@@ -14,3 +14,26 @@
  - Update dp[i][j] by adding the length of the interval [cuts[i-1], cuts[j-1]].
  - Repeat steps 3-9 until all subintervals of different lengths are processed.
  - Return dp[0][m+1] as the minimum cost to cut the stick.
+
+
+
+<br></br>
+## Python Code
+```shell
+class Solution:
+    def minCost(self, n, cuts):
+        cuts.append(0)
+        cuts.append(n)
+        cuts.sort()
+        m = len(cuts)
+        dp = [[0] * m for _ in range(m)]
+
+        for l in range(2, m):
+            for i in range(m - l):
+                j = i + l
+                dp[i][j] = float('inf')
+                for k in range(i + 1, j):
+                    dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j] + cuts[j] - cuts[i])
+
+        return dp[0][m - 1]
+```
