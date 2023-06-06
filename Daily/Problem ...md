@@ -1,5 +1,6 @@
 # Problem ....
-# Python Code
+## Approach
+## Python Code
 ```shell
 
 ```
