@@ -1,6 +1,5 @@
 # 1318. Minimum Flips to Make a OR b Equal to c
 
-
 ## Approach
 Consider the i'th bit of c. There are two cases:
 
